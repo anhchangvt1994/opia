@@ -115,10 +115,12 @@ var common = function(){
               history.replaceState(undefined,undefined,hash);
             }else{
               window.location.hash = "#/"+this.getAttribute("href");
-            }             
+            }                         
+          }          
+          if(e){
             e.preventDefault();
           }          
-        }
+        }        
       }
 
       function checkSubMenuClick(){
