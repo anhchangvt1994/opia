@@ -49,8 +49,7 @@ var common = function(){
         } 
       }
       glevent.click(".sub_link",function(cur){
-        if(wWidth <= 640){ 
-          console.log(wWidth);
+        if(wWidth <= 640){           
           if(cur.className.split("select_subItem").length > 1){
             cur.className = cur.className.replace(/\b select_subItem\b/g, "");              
             if(document.getElementsByClassName("menu_down")[0]){
@@ -102,14 +101,14 @@ var common = function(){
           counter = 0;
         }        
       }
-      function checkHashLocation(hash){        
+      function checkHashLocation(hash,e){        
         if(window.outerWidth > 780 && hash.split("#").length > 1){
           anchorPoint = Number(document.getElementById(hash.split("#")[1]).getAttribute("data-anchor"));          
         }else{
           anchorPoint = 0;
         }
-        if(hash.split("#").length > 1){                    
-          if(document.getElementById(hash.split("#")[1]) !== null){
+        if(hash.split("#").length > 1){                              
+          if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
             KUTE.to('window',{scroll:elTop},{easing: 'easingSinusoidalInOut',duration:800}).start()                            
             if(history.replaceState){
@@ -117,6 +116,7 @@ var common = function(){
             }else{
               window.location.hash = "#/"+this.getAttribute("href");
             }             
+            e.preventDefault();
           }          
         }
       }
@@ -124,8 +124,7 @@ var common = function(){
       function checkSubMenuClick(){
         var items = document.getElementsByClassName("anchor_link");        
         glevent.click("[href*='#']",function(cur,e){
-          checkHashLocation(cur.getAttribute("href"));          
-          e.preventDefault();
+          checkHashLocation(cur.getAttribute("href"),e);                    
         })
       }
       checkSubMenuClick();

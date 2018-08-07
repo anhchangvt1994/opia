@@ -75,8 +75,7 @@ var public = function(){
         objItem = el.split("#").length > 1 ? el.split("#")[1] : el.split(".")[1];
         elements = document.getElementById(objItem) || document.getElementsByClassName(objItem);      
         objItem = (elements[0] || elements).className != "" ? elements[0].className : elements.id;                  
-      }      
-      
+      }            
       if(elements[0]){
         if(!objItemQuery){
           objItem = elements[0].className;        
@@ -94,14 +93,11 @@ var public = function(){
           objItem = elements[0].className;        
           for(var i = 1;i<elements.length;i++){
             if(objItem == ""){
-              objItem = elements[i].className;                            
-              
+              objItem = elements[i].className;                                          
             }else{              
-              objItem = (objItem.split(" ").length > elements[i].className.split(" ").length ? objItem : elements[i].className);
-              
+              objItem = (objItem.split(" ").length > elements[i].className.split(" ").length ? objItem : elements[i].className);              
             }                       
             if(i == elements.length - 1){ 
-              
               if(!clickFunc[objItem]){
                 clickFunc[objItem] = [];                      
               }            
