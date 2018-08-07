@@ -116,7 +116,7 @@ var common = function(){
             }else{
               window.location.hash = "#/"+this.getAttribute("href");
             }                         
-          }          
+          }                    
           if(e){
             e.preventDefault();
           }          
