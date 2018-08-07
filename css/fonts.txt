@@ -1,0 +1,11 @@
+﻿Myriad Pro
+
+- Regular (header)
+- Bold (box01,box02,box03,box04)
+- Bold Condensed Italic (box01,box03,box04,footer)
+- Condensed Italic (box02,box03,box04,footer)
+- Condense (box04,footer)
+- Bold Condense (footer) 
+
+
+

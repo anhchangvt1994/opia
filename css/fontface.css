@@ -1,0 +1,115 @@
+/*icon font*/
+
+@font-face {
+  font-family: 'opiaicon';
+  src:  url('fonts/icomoon.eot?7gmqsr');
+  src:  url('fonts/icomoon.eot?7gmqsr#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7gmqsr') format('truetype'),
+    url('fonts/icomoon.woff?7gmqsr') format('woff'),
+    url('fonts/icomoon.svg?7gmqsr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'opiaicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye:before {
+  content: "\e906";
+}
+.icon-like:before {
+  content: "\e905";
+}
+.icon-tick:before {
+  content: "\e904";
+}
+.icon-user:before {
+  content: "\e903";
+}
+.icon-fb:before {
+  content: "\e900";
+}
+.icon-insta:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e902";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+
+
+
+/*fonts/MyriadPro front*/
+
+@font-face {
+font-family: 'MyriadPro-Regular';
+src: url('fonts/MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-Regular.woff') format('woff'), /* Modern Browsers */
+     url('fonts/MyriadPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+font-family: 'MyriadPro-Bold';
+src: url('fonts/MyriadPro-Bold.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+     url('fonts/MyriadPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+     url('fonts/MyriadPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+font-family: 'MyriadPro-Cond';
+src: url('fonts/MyriadPro-Cond.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-Cond.woff2') format('woff2'), /* Super Modern Browsers */
+     url('fonts/MyriadPro-Cond.woff') format('woff'), /* Pretty Modern Browsers */
+     url('fonts/MyriadPro-Cond.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-Cond.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+font-family: 'MyriadPro-BoldCond';
+src: url('fonts/MyriadPro-BoldCond.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-BoldCond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-BoldCond.woff2') format('woff2'), /* Super Modern Browsers */
+     url('fonts/MyriadPro-BoldCond.woff') format('woff'), /* Pretty Modern Browsers */
+     url('fonts/MyriadPro-BoldCond.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-BoldCond.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+font-family: 'MyriadPro-BoldCondIt';
+src: url('fonts/MyriadPro-BoldCondIt.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-BoldCondIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-BoldCondIt.woff2') format('woff2'), /* Super Modern Browsers */
+     url('fonts/MyriadPro-BoldCondIt.woff') format('woff'), /* Pretty Modern Browsers */
+     url('fonts/MyriadPro-BoldCondIt.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-BoldCondIt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+font-family: 'MyriadPro-CondIt';
+src: url('fonts/MyriadPro-CondIt.eot'); /* IE9 Compat Modes */
+src: url('fonts/MyriadPro-CondIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('fonts/MyriadPro-CondIt.woff2') format('woff2'), /* Super Modern Browsers */
+     url('fonts/MyriadPro-CondIt.woff') format('woff'), /* Pretty Modern Browsers */
+     url('fonts/MyriadPro-CondIt.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/MyriadPro-CondIt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

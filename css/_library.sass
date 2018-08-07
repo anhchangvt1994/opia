@@ -1,0 +1,143 @@
+/*variable*/
+
+$deepblue:#0d1019
+$deepblue02:#19213a
+$copper:#df9a08
+$orange:#f2d537
+$skin:#bda074
+
+/*functional*/
+=shape($w:"",$h:"",$miw:"",$mih:"",$maw:"",$mah:"",$fl:"",$ov:"",$opa:"",$border:"",$outline:"")
+  @if $w!=""
+    width: $w
+  @if $h!=""
+    height: $h
+  @if $miw!=""
+    min-width: $miw
+  @if $maw!=""
+    max-width: $maw
+  @if $mih!=""
+    min-height: $mih
+  @if $mah!=""
+    max-height: $mah
+  @if $fl!=""
+    float: $fl
+  @if $ov!=""
+    overflow: $ov
+  @if $border!=""
+    border: $border
+  @if $outline!=""
+    outline: $outline
+  @if $opa!=""
+    opacity: $opa
+
+=bshadow($prop...)
+  -webkit-box-shadow: $prop
+  -moz-box-shadow: $prop
+  box-shadow: $prop
+
+=transform($prop...)
+  -webkit-transform: $prop
+  -moz-transform: $prop
+  -ms-transform: $prop
+  -o-transform: $prop
+  transform: $prop
+
+=position($pos,$l:"",$r:"",$t:"",$b:"")
+  position: $pos
+  @if $l!=""
+    left: $l
+  @if $r!=""
+    right: $r
+  @if $t!=""
+    top: $t
+  @if $b!= ""
+    bottom: $b
+
+=transition($prop...)
+  -webkit-transition: $prop
+  -moz-transition: $prop
+  -ms-transition: $prop
+  -o-transition: $prop
+  transition: $prop
+
+=transition-prop($prop...)
+  -webkit-transition-property: $prop
+  -moz-transition-property: $prop
+  -o-transition-property: $prop
+  transition-property: $prop
+
+=timimg-func($prop...)
+  -webkit-transition-timing-function: $prop
+  -moz-transition-timing-function: $prop
+  -o-transition-timing-function: $prop
+  transition-timing-function: $prop
+
+=transition-dur($prop...)
+  -webkit-transition-duration: $prop
+  -moz-transition-duration: $prop
+  -o-transition-duration: $prop
+  transition-duration: $prop
+
+=transition-delay($prop)
+  -webkit-transition-delay: $prop
+  -moz-transition-delay: $prop
+  -o-transition-delay: $prop
+  transition-delay: $prop
+
+=adjust_mid($pos:"",$cord:"xy",$h:"",$w:"",$margin:"")
+  @if $pos!="" and $h!="" and $w!=""
+    +position($pos,$l:calc(50% - #{$w / 2}),$t:calc(50% - #{$h / 2}))
+  @else if $pos!="" and $h!=""
+    +position($pos,$t:calc(50% - #{$h / 2}))
+  @else if $pos!="" and $w!=""
+    +position($pos,$l:calc(50% - #{$w / 2}))
+  @else if $pos==absolute and $cord=="xy"
+    @if $margin==""
+      +position($pos,$l:50%,$t:50%)
+      +transform(translate(-50%,-50%))
+    @else
+      +position($pos,0,0,0,0)
+      margin: $margin
+  @else if $pos==absolute and $cord=="x"
+    @if $margin==""
+      +position($pos,$l:50%)
+      +transform(translateX(-50%))
+    @else
+      +position($pos,$l:0,$r:0)
+      margin: 0 auto
+  @else if $pos==absolute and $cord=="y"
+    @if $margin==""
+      +position($pos,$t:50%)
+      +transform(translateY(-50%))
+    @else
+      +position($pos,$t:0,$b:0)
+      margin: auto 0
+  @else if $pos==relative and $cord=="xy"    
+    +position($pos,$l:50%,$t:50%)
+    +transform(translate(-50%,-50%))
+  @else if $pos==relative and $cord=="x"    
+    +position($pos,$l:50%)
+    +transform(translateX(-50%))
+  @else if $pos==relative and $cord=="y"
+    +position($pos,$t:50%)
+    +transform(translateY(-50%))
+
+=flex($dis:"",$align-self:"",$align-items:"",$just-content:"",$just-items:"")
+  @if $dis=="flex"
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+  @else if $dis=="inline-flex"
+    display: -webkit-inline-flex
+    display: -ms-inline-flexbox
+    display: inline-flex
+  @if $align-self!=""
+    align-self: $align-self
+  @if $align-items!=""
+    align-items: $align-items
+  @if $just-content!=""
+    justify-content: $just-content
+  @if $just-items!=""
+    justify-items: $just-items
