@@ -2,7 +2,7 @@ var common = function(){
   return {
     start:function(){
       this.newsScroll();
-      // this.menuIcon();  
+      this.menuIcon();  
       this.windowScroll();
       this.totop();
     },
@@ -48,36 +48,36 @@ var common = function(){
           document.getElementById("gnavi").className = "active";
         } 
       }
-      glevent.click(".sub_link",function(cur){
-        if(wWidth <= 640){           
-          if(cur.className.split("select_subItem").length > 1){
-            cur.className = cur.className.replace(/\b select_subItem\b/g, "");              
-            if(document.getElementsByClassName("menu_down")[0]){
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{height:0},{easing: 'easingCubicOut', duration: 500}).start();
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:0},{easing: 'easingCubicOut', duration: 1200}).start();
-              document.getElementsByClassName("menu_down")[0].className = document.getElementsByClassName("menu_down")[0].className.replace(/\b menu_down\b/g, "");
-            }              
-          }else{
-            for(var i = 0;i < items.length; i++){
-              items[i].className = items[i].className.replace(/\b select_subItem\b/g, "");
-            }              
-            if(document.getElementsByClassName("menu_down")[0]){
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{height:0},{easing: 'easingCubicOut', duration: 500}).start();
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:0},{easing: 'easingCubicOut', duration: 1200}).start();
-              document.getElementsByClassName("menu_down")[0].className = document.getElementsByClassName("menu_down")[0].className.replace(/\b menu_down\b/g, "");
-            }           
-            var sub_menu = cur.nextElementSibling;   
-            var submn_height = sub_menu.children[0].offsetHeight*sub_menu.children.length;              
-            sub_menu.className += " menu_down";
-            cur.className+=" select_subItem";
-            setTimeout(function(){
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{height:submn_height},{easing: 'easingCubicOut', duration: 500}).start();
-              KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:1},{easing: 'easingCubicOut', duration: 1200}).start();
-            },50)
-          }            
-          return false;
-        }
-      })  
+      // glevent.click(".sub_link",function(cur){
+      //   if(wWidth <= 640){           
+      //     if(cur.className.split("select_subItem").length > 1){
+      //       cur.className = cur.className.replace(/\b select_subItem\b/g, "");              
+      //       if(document.getElementsByClassName("menu_down")[0]){
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{height:0},{easing: 'easingCubicOut', duration: 500}).start();
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:0},{easing: 'easingCubicOut', duration: 1200}).start();
+      //         document.getElementsByClassName("menu_down")[0].className = document.getElementsByClassName("menu_down")[0].className.replace(/\b menu_down\b/g, "");
+      //       }              
+      //     }else{
+      //       for(var i = 0;i < items.length; i++){
+      //         items[i].className = items[i].className.replace(/\b select_subItem\b/g, "");
+      //       }              
+      //       if(document.getElementsByClassName("menu_down")[0]){
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{height:0},{easing: 'easingCubicOut', duration: 500}).start();
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:0},{easing: 'easingCubicOut', duration: 1200}).start();
+      //         document.getElementsByClassName("menu_down")[0].className = document.getElementsByClassName("menu_down")[0].className.replace(/\b menu_down\b/g, "");
+      //       }           
+      //       var sub_menu = cur.nextElementSibling;   
+      //       var submn_height = sub_menu.children[0].offsetHeight*sub_menu.children.length;              
+      //       sub_menu.className += " menu_down";
+      //       cur.className+=" select_subItem";
+      //       setTimeout(function(){
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{height:submn_height},{easing: 'easingCubicOut', duration: 500}).start();
+      //         KUTE.to(document.getElementsByClassName("menu_down")[0],{opacity:1},{easing: 'easingCubicOut', duration: 1200}).start();
+      //       },50)
+      //     }            
+      //     return false;
+      //   }
+      // })  
     },
     windowScroll:function(){
       var wWidth = window.outerWidth;            
