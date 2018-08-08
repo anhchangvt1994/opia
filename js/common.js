@@ -131,7 +131,8 @@ var common = function(){
       //   // })
       // }
       // checkSubMenuClick();
-      var items = document.getElementsByClassName("anchor_link");        
+      var items = document.getElementsByClassName("anchor_item");        
+      console.log(items);
       for(var i = 0;i<items.length;i++){
         items[i].onclick = function(e){
           alert("run");
