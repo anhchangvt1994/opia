@@ -49,6 +49,7 @@ var common = function(){
         } 
       }
       glevent.click(".sub_link",function(cur){
+        console.log("click");
         if(wWidth <= 640){           
           if(cur.className.split("select_subItem").length > 1){
             cur.className = cur.className.replace(/\b select_subItem\b/g, "");              
@@ -124,10 +125,15 @@ var common = function(){
       }
 
       function checkSubMenuClick(){
-        var items = document.getElementsByClassName("anchor_link");        
-        glevent.click("[href*='#']",function(cur,e){
-          checkHashLocation(cur.getAttribute("href"),e);                    
-        })
+        var items = document.querySelectorAll("[href*='#']");
+        for(var i = 0;i<items.length;i++){
+          items[i].onclick = function(e){
+            checkHashLocation(cur.getAttribute("href"),e);                      
+          }
+        }
+        // glevent.click("[href*='#']",function(cur,e){
+        //   checkHashLocation(cur.getAttribute("href"),e);                    
+        // })
       }
       checkSubMenuClick();
     },
