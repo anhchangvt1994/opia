@@ -49,7 +49,6 @@ var common = function(){
         } 
       }
       glevent.click(".sub_link",function(cur){
-        console.log("click");
         if(wWidth <= 640){           
           if(cur.className.split("select_subItem").length > 1){
             cur.className = cur.className.replace(/\b select_subItem\b/g, "");              
@@ -108,6 +107,7 @@ var common = function(){
         }else{
           anchorPoint = 0;
         }
+        alert("run");
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
@@ -125,16 +125,10 @@ var common = function(){
       }
 
       function checkSubMenuClick(){
-        var items = document.querySelectorAll("[href*='#']");
-        console.log(items);
-        for(var i = 0;i<items.length;i++){
-          items[i].onclick = function(e){
-            checkHashLocation(this.getAttribute("href"),e);                      
-          }
-        }
-        // glevent.click("[href*='#']",function(cur,e){
-        //   checkHashLocation(cur.getAttribute("href"),e);                    
-        // })
+        var items = document.getElementsByClassName("anchor_link");        
+        glevent.click("[href*='#']",function(cur,e){
+          checkHashLocation(cur.getAttribute("href"),e);                    
+        })
       }
       checkSubMenuClick();
     },
