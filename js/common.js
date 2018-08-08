@@ -123,20 +123,21 @@ var common = function(){
         }        
       }
 
-      function checkSubMenuClick(){
-        var items = document.getElementsByClassName("anchor_link");        
-        for(var i = 0;i<items.length;i++){
-          items[i].onclick = function(e){
-            alert("run");
-            checkHashLocation(this.getAttribute("href"),e);                    
-          }
+      // function checkSubMenuClick(){
+        
+      //   // glevent.click("[href*='#']",function(cur,e){
+      //   //   alert("run");
+      //   //   checkHashLocation(cur.getAttribute("href"),e);                    
+      //   // })
+      // }
+      // checkSubMenuClick();
+      var items = document.getElementsByClassName("anchor_link");        
+      for(var i = 0;i<items.length;i++){
+        items[i].onclick = function(e){
+          alert("run");
+          checkHashLocation(this.getAttribute("href"),e);                    
         }
-        // glevent.click("[href*='#']",function(cur,e){
-        //   alert("run");
-        //   checkHashLocation(cur.getAttribute("href"),e);                    
-        // })
       }
-      checkSubMenuClick();
     },
 
     totop:function(){
