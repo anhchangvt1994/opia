@@ -126,9 +126,10 @@ var common = function(){
 
       function checkSubMenuClick(){
         var items = document.querySelectorAll("[href*='#']");
+        console.log(items);
         for(var i = 0;i<items.length;i++){
           items[i].onclick = function(e){
-            checkHashLocation(cur.getAttribute("href"),e);                      
+            checkHashLocation(this.getAttribute("href"),e);                      
           }
         }
         // glevent.click("[href*='#']",function(cur,e){
