@@ -126,6 +126,7 @@ var common = function(){
       function checkSubMenuClick(){
         var items = document.getElementsByClassName("anchor_link");        
         glevent.click("[href*='#']",function(cur,e){
+          alert("run");
           checkHashLocation(cur.getAttribute("href"),e);                    
         })
       }
