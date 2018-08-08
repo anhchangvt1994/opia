@@ -109,9 +109,15 @@ var common = function(){
         }
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
-            elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
-            alert(elTop);
-            KUTE.to('window',{scroll:elTop},{easing: 'easingSinusoidalInOut',duration:800}).start()                            
+            elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                                                
+            // KUTE.to(document.getElementsByTagName("body")[0],{scroll:elTop},{easing: 'easingSinusoidalInOut',duration:800}).start()                            
+            var scroll = anime({
+              targets: [document.body, document.documentElement],
+              scrollTop: elTop,
+              duration: 800,              
+              // direction: 'alternate',
+              easing: 'easeInOutSine'
+            });
             if(history.replaceState){
               history.replaceState(undefined,undefined,hash);
             }else{
