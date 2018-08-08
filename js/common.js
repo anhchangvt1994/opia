@@ -110,6 +110,7 @@ var common = function(){
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
+            alert("run");
             KUTE.to('window',{scroll:elTop},{easing: 'easingSinusoidalInOut',duration:800}).start()                            
             if(history.replaceState){
               history.replaceState(undefined,undefined,hash);
@@ -134,8 +135,7 @@ var common = function(){
       var items = document.getElementsByClassName("anchor_item");        
       console.log(items);
       for(var i = 0;i<items.length;i++){
-        items[i].onclick = function(e){
-          alert("run");
+        items[i].onclick = function(e){     
           checkHashLocation(this.getAttribute("href"),e);                    
         }
       }
