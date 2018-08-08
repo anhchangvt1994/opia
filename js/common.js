@@ -2,7 +2,7 @@ var common = function(){
   return {
     start:function(){
       this.newsScroll();
-      this.menuIcon();  
+      // this.menuIcon();  
       this.windowScroll();
       this.totop();
     },
