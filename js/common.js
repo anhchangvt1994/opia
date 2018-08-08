@@ -110,7 +110,7 @@ var common = function(){
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
-            alert("run");
+            alert(elTop);
             KUTE.to('window',{scroll:elTop},{easing: 'easingSinusoidalInOut',duration:800}).start()                            
             if(history.replaceState){
               history.replaceState(undefined,undefined,hash);
