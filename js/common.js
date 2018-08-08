@@ -101,12 +101,12 @@ var common = function(){
           counter = 0;
         }        
       }
-      function checkHashLocation(hash,e){                
+      function checkHashLocation(hash,e){        
         if(window.outerWidth > 780 && hash.split("#").length > 1){
           anchorPoint = Number(document.getElementById(hash.split("#")[1]).getAttribute("data-anchor"));          
         }else{
           anchorPoint = 0;
-        }        
+        }
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
@@ -125,15 +125,9 @@ var common = function(){
 
       function checkSubMenuClick(){
         var items = document.getElementsByClassName("anchor_link");        
-        for(var i = 0;i< items.length;i++){
-          items[i].onclick = function(e){
-            alert("run");
-            checkHashLocation(this.getAttribute("href"),e);                      
-          }
-        }
-        // glevent.click("[href*='#']",function(cur,e){
-        //   checkHashLocation(cur.getAttribute("href"),e);                    
-        // })
+        glevent.click("[href*='#']",function(cur,e){
+          checkHashLocation(cur.getAttribute("href"),e);                    
+        })
       }
       checkSubMenuClick();
     },
