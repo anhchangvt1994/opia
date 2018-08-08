@@ -101,13 +101,12 @@ var common = function(){
           counter = 0;
         }        
       }
-      function checkHashLocation(hash,e){        
+      function checkHashLocation(hash,e){                
         if(window.outerWidth > 780 && hash.split("#").length > 1){
           anchorPoint = Number(document.getElementById(hash.split("#")[1]).getAttribute("data-anchor"));          
         }else{
           anchorPoint = 0;
-        }
-        alert("run");
+        }        
         if(hash.split("#").length > 1){                              
           if(document.getElementById(hash.split("#")[1]) !== null){            
             elTop = getElemDistance(document.getElementById(hash.split("#")[1]))-counter-anchorPoint;                        
@@ -128,6 +127,7 @@ var common = function(){
         var items = document.getElementsByClassName("anchor_link");        
         for(var i = 0;i< items.length;i++){
           items[i].onclick = function(e){
+            alert("run");
             checkHashLocation(this.getAttribute("href"),e);                      
           }
         }
