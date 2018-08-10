@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/flickity.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <script type="text/javascript" src="js/public_event.js"></script>
-  <script type="text/javascript" src="js/firefly_library.js"></script>  
+  <script type="text/javascript" src="js/public_event.min.js"></script>
+  <script type="text/javascript" src="js/firefly_library.min.js"></script>  
   <script type="text/javascript" src="js/prlax_library.js" defer></script>  
   <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="js/OverlayScrollbars.min.js"></script>
+  <script type="text/javascript" src="js/anime.min.js" defer></script>
+  <script type="text/javascript" src="js/common.min.js" defer></script> 
 </head>
 <body>
   <div id="wrapper">
@@ -42,10 +44,10 @@
               <a href="http://opiala.vn">Trang chủ</a>
             </li>
             <li class="gnav_item">
-              <a href="#gt" class="anchor_item">Giới thiệu</a>
+              <a href="#gt">Giới thiệu</a>
             </li>
             <li class="gnav_item">
-              <a href="#sp" class="sub_link anchor_item">Sản phẩm</a>
+              <a href="#sp" class="sub_link">Sản phẩm</a>
               <ul class="sub_gnav">
                 <li class="sub_gnavItem">
                   <a href="./sanpham.html">Bánh ngọt</a>
@@ -62,7 +64,7 @@
               </ul>
             </li>
             <li class="gnav_item">
-              <a href="#bv" class="sub_link anchor_item">Bài viết</a>
+              <a href="#bv" class="sub_link">Bài viết</a>
               <ul class="sub_gnav">
                 <li class="sub_gnavItem">
                   <a href="./baiviet.html">Công thức làm bánh</a>
@@ -79,7 +81,7 @@
               </ul>
             </li>
             <li class="gnav_item">
-              <a href="#tt" class="sub_link anchor_item">Tin tức</a>
+              <a href="#tt" class="sub_link">Tin tức</a>
               <ul class="sub_gnav">
                 <li class="sub_gnavItem">
                   <a href="./tintuc.html">Món ngon thế giới</a>
@@ -90,7 +92,7 @@
               </ul>
             </li>
             <li class="gnav_item">
-              <a href="#sk" class="anchor_item">Sự kiện</a>  
+              <a href="#sk">Sự kiện</a>  
             </li>
             <li class="gnav_item">
               <a>Liên hệ</a>
@@ -154,7 +156,7 @@
             <div class="inner">
               <ul class="carousel js-flickity sp_slider" data-flickity-options='{ "wrapAround": true,"groupCells": true, "prevNextButtons": false,"cellAlign":"left"}'>
                 <li class="sp_item carousel-cell">
-                  <a href="">
+                  <a href="./sanpham-chitiet.html">
                     <p class="sp_slImg">
                       <img src="images/b02_img01.png" alt="Pizza Stagioni">
                     </p>
@@ -162,7 +164,7 @@
                   </a>
                 </li>
                 <li class="sp_item carousel-cell">
-                  <a href="">
+                  <a href="./sanpham-chitiet.html">
                     <p class="sp_slImg">
                       <img src="images/b02_img02.png" alt="Pizza Stagioni">
                     </p>
@@ -170,7 +172,7 @@
                   </a>
                 </li>
                 <li class="sp_item carousel-cell">
-                  <a href="">
+                  <a href="./sanpham-chitiet.html">
                     <p class="sp_slImg">
                       <img src="images/b02_img03.png" alt="Pizza Stagioni">
                     </p>
@@ -178,7 +180,7 @@
                   </a>
                 </li>
                 <li class="sp_item carousel-cell">
-                  <a href="">
+                  <a href="./sanpham-chitiet.html">
                     <p class="sp_slImg">
                       <img src="images/b02_img04.png" alt="Pizza Stagioni">
                     </p>
@@ -186,7 +188,7 @@
                   </a>
                 </li>
                 <li class="sp_item carousel-cell">
-                  <a href="">
+                  <a href="./sanpham-chitiet.html">
                     <p class="sp_slImg">
                       <img src="images/b02_img03.png" alt="Pizza Stagioni">
                     </p>
@@ -213,7 +215,7 @@
               </h4>
               <ul class="post_list">
                 <li class="post_item">
-                  <a href="">
+                  <a href="./baiviet-chitiet.html">
                     <span class="post_image">
                       <img src="images/b03_img01.jpg" alt="Pizza">
                     </span>
@@ -226,7 +228,7 @@
                   </a>
                 </li>
                 <li class="post_item">
-                  <a href="">
+                  <a href="./baiviet-chitiet.html">
                     <span class="post_image">
                       <img src="images/b03_img02.jpg" alt="Pizza">
                     </span>
@@ -239,7 +241,7 @@
                   </a>
                 </li>
                 <li class="post_item">
-                  <a href="">
+                  <a href="./baiviet-chitiet.html">
                     <span class="post_image">
                       <img src="images/b03_img03.jpg" alt="Pizza">
                     </span>
@@ -252,7 +254,7 @@
                   </a>
                 </li>
                 <li class="post_item">
-                  <a href="">
+                  <a href="./baiviet-chitiet.html">
                     <span class="post_image">
                       <img src="images/b03_img04.jpg" alt="Pizza">
                     </span>
@@ -278,7 +280,7 @@
                 </h4>
                 <ul class="post_list dark_item">
                   <li class="post_item">
-                    <a href="">
+                    <a href="./tintuc-chitiet.html">
                       <span class="post_image">
                         <img src="images/b04_img01.jpg" alt="Pizza">
                       </span>
@@ -291,7 +293,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./tintuc-chitiet.html">
                       <span class="post_image">
                         <img src="images/b04_img02.jpg" alt="Pizza">
                       </span>
@@ -304,7 +306,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./tintuc-chitiet.html">
                       <span class="post_image">
                         <img src="images/b04_img03.jpg" alt="Pizza">
                       </span>
@@ -317,7 +319,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./tintuc-chitiet.html">
                       <span class="post_image">
                         <img src="images/b04_img04.jpg" alt="Pizza">
                       </span>
@@ -341,7 +343,7 @@
                 </h4>
                 <ul class="post_list dark_item full_width custom-scroll-news">
                   <li class="post_item">
-                    <a href="">
+                    <a href="./sukien-chitiet.html">
                       <span class="post_image">
                         <img src="images/b05_img01.jpg" alt="Pizza">
                       </span>
@@ -357,7 +359,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./sukien-chitiet.html">
                       <span class="post_image">
                         <img src="images/b05_img02.jpg" alt="Pizza">
                       </span>
@@ -373,7 +375,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./sukien-chitiet.html">
                       <span class="post_image">
                         <img src="images/b05_img02.jpg" alt="Pizza">
                       </span>
@@ -389,7 +391,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./sukien-chitiet.html">
                       <span class="post_image">
                         <img src="images/b05_img02.jpg" alt="Pizza">
                       </span>
@@ -405,7 +407,7 @@
                     </a>
                   </li>
                   <li class="post_item">
-                    <a href="">
+                    <a href="./sukien-chitiet.html">
                       <span class="post_image">
                         <img src="images/b05_img02.jpg" alt="Pizza">
                       </span>
@@ -537,9 +539,6 @@
         </div>
       </div>
     </div>
-  </div> 
-  <script type="text/javascript" src="js/kute.min.js"></script>
-  <script type="text/javascript" src="js/anime.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script>
+  </div>   
 </body>
 </html>
